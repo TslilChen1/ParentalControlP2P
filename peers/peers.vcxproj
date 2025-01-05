@@ -134,18 +134,30 @@
   <ItemGroup>
     <ClCompile Include="Communicator.cpp" />
     <ClCompile Include="Deserializer.cpp" />
+    <ClCompile Include="DTLS.cpp" />
+    <ClCompile Include="HashClass.cpp" />
+    <ClCompile Include="KeyUse.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PRF.cpp" />
+    <ClCompile Include="rsa.cpp" />
     <ClCompile Include="Serializer.cpp" />
     <ClCompile Include="SHA256.cpp" />
+    <ClCompile Include="StunRequests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Communicator.h" />
     <ClInclude Include="Deserializer.h" />
+    <ClInclude Include="DTLS.h" />
+    <ClInclude Include="HashClass.h" />
     <ClInclude Include="json.hpp" />
+    <ClInclude Include="KeyUse.h" />
+    <ClInclude Include="PRF.h" />
     <ClInclude Include="Requests.h" />
     <ClInclude Include="Responses.h" />
+    <ClInclude Include="rsa.h" />
     <ClInclude Include="Serializer.h" />
     <ClInclude Include="SHA256.h" />
+    <ClInclude Include="StunRequests.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

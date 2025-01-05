@@ -8,6 +8,12 @@
 #include <mutex>
 #include "Desirialize.h"
 #include "Serialize.h"
+enum class State {
+    authentication,
+    Handle_connections,
+    sdp,
+    ice
+};
 
 struct Parent {
     std::shared_ptr<Communicator> parentCommunicator;

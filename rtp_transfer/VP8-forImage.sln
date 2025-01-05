@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VP8-forImage", "VP8-forImage.vcxproj", "{0154C18A-9F95-49D5-B762-DA2ED8C001E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0154C18A-9F95-49D5-B762-DA2ED8C001E2}.Debug|x64.ActiveCfg = Debug|x64
+		{0154C18A-9F95-49D5-B762-DA2ED8C001E2}.Debug|x64.Build.0 = Debug|x64
+		{0154C18A-9F95-49D5-B762-DA2ED8C001E2}.Debug|x86.ActiveCfg = Debug|Win32
+		{0154C18A-9F95-49D5-B762-DA2ED8C001E2}.Debug|x86.Build.0 = Debug|Win32
+		{0154C18A-9F95-49D5-B762-DA2ED8C001E2}.Release|x64.ActiveCfg = Release|x64
+		{0154C18A-9F95-49D5-B762-DA2ED8C001E2}.Release|x64.Build.0 = Release|x64
+		{0154C18A-9F95-49D5-B762-DA2ED8C001E2}.Release|x86.ActiveCfg = Release|Win32
+		{0154C18A-9F95-49D5-B762-DA2ED8C001E2}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D219D2A-9D43-47C1-AD07-A8D94336EAC4}
+	EndGlobalSection
+EndGlobal

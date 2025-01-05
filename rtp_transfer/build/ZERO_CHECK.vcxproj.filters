@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Magshimim\Documents\Magshimim\or-akiva-504-parentalcontrolp2p\VP8-forImage\build\CMakeFiles\7c165120e765067c57ad5f625562e22d\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0607E2A2-61DE-3C97-A692-A9236937C4C1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

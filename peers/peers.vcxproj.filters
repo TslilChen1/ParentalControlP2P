@@ -30,6 +30,24 @@
     <ClCompile Include="SHA256.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="StunRequests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HashClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyUse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PRF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rsa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTLS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Communicator.h">
@@ -51,6 +69,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SHA256.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StunRequests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HashClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyUse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PRF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rsa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTLS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

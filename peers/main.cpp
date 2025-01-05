@@ -1,23 +1,69 @@
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ _________  ________  ___       ___  ___                     ___    ___ ________  ___  ________
+|\___   ___\\   ____\|\  \     |\  \|\  \                   |\  \  /  /|\   __  \|\  \|\   __  \
+\|___ \  \_\ \  \___|\ \  \    \ \  \ \  \      ____________\ \  \/  / | \  \|\  \ \  \ \  \|\  \
+     \ \  \ \ \_____  \ \  \    \ \  \ \  \    |\____________\ \    / / \ \   __  \ \  \ \   _  _\
+      \ \  \ \|____|\  \ \  \____\ \  \ \  \___\|____________|\/  /  /   \ \  \ \  \ \  \ \  \\  \|
+       \ \__\  ____\_\  \ \_______\ \__\ \_______\          __/  / /      \ \__\ \__\ \__\ \__\\ _\
+        \|__| |\_________\|_______|\|__|\|_______|         |\___/ /        \|__|\|__|\|__|\|__|\|__|
+              \|_________|                                 \|___|/
+
+
+                 ________  ________  ________  _______   ________   _________  ________  ___
+                |\   __  \|\   __  \|\   __  \|\  ___ \ |\   ___  \|\___   ___\\   __  \|\  \
+                \ \  \|\  \ \  \|\  \ \  \|\  \ \   __/|\ \  \\ \  \|___ \  \_\ \  \|\  \ \  \
+                 \ \   ____\ \   __  \ \   _  _\ \  \_|/_\ \  \\ \  \   \ \  \ \ \   __  \ \  \
+                  \ \  \___|\ \  \ \  \ \  \\  \\ \  \_|\ \ \  \\ \  \   \ \  \ \ \  \ \  \ \  \____
+                   \ \__\    \ \__\ \__\ \__\\ _\\ \_______\ \__\\ \__\   \ \__\ \ \__\ \__\ \_______\
+                    \|__|     \|__|\|__|\|__|\|__|\|_______|\|__| \|__|    \|__|  \|__|\|__|\|_______|
+
+                                                     ____________
+                                                    |\____________\
+                                                    \|____________|
+
+                          ________  ________  ________   _________  ________  ________  ___
+                         |\   ____\|\   __  \|\   ___  \|\___   ___\\   __  \|\   __  \|\  \
+                         \ \  \___|\ \  \|\  \ \  \\ \  \|___ \  \_\ \  \|\  \ \  \|\  \ \  \
+                          \ \  \    \ \  \\\  \ \  \\ \  \   \ \  \ \ \   _  _\ \  \\\  \ \  \
+                           \ \  \____\ \  \\\  \ \  \\ \  \   \ \  \ \ \  \\  \\ \  \\\  \ \  \____
+                            \ \_______\ \_______\ \__\\ \__\   \ \__\ \ \__\\ _\\ \_______\ \_______\
+                             \|_______|\|_______|\|__| \|__|    \|__|  \|__|\|__|\|_______|\|_______|
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+#include "Communicator.h"
 #include <iostream>
 #include <thread>
-#include <string>
-#include <winsock2.h>
-#include "Communicator.h"
-#include <ws2tcpip.h>
+
+
+
 #pragma comment(lib, "Ws2_32.lib")
 
-int main(int argc, char* argv[]) {
-    try {
-        SOCKET  connectionToSignalingServerSocket;
-        /*if (argc != 2) {
-            std::cerr << "Usage: " << argv[0] << " <role>" << std::endl;
-            std::cerr << "Example: " << argv[0] << " Parent" << std::endl;
-            return 1;
-        }*/
 
+#define PORT 8888
+
+int main(int argc, char* argv[]) {
+    /*if (argc != 2) {
+        std::cerr << "Usage: " << argv[0] << " <role>" << std::endl;
+        std::cerr << "Example: " << argv[0] << " Parent" << std::endl;
+        return 1;
+    }
+
+    std::string role = argv[1];
+    if (role != "Parent" && role != "Child") {
+        std::cerr << "Invalid role: " << role << ". Role must be either 'Parent' or 'Child'." << std::endl;
+        return 1;
+    }
+    */
+    try {
+        
+        SOCKET  connectionToSignalingServerSocket;
         Communicator communicator;
 
-        //std::string role = argv[1];
+        
+        
         std::string role;
         std::cout << "Please enter your role (Parent/Child): ";
        
@@ -48,7 +94,7 @@ int main(int argc, char* argv[]) {
 
         sockaddr_in serverInfo = { 0 };
         serverInfo.sin_family = AF_INET;
-        serverInfo.sin_port = htons(8888);
+        serverInfo.sin_port = htons(PORT);
 
         if (inet_pton(AF_INET, serverAddress.c_str(), &serverInfo.sin_addr) <= 0) {
             std::cerr << "Invalid address: " << serverAddress << std::endl;
@@ -64,10 +110,10 @@ int main(int argc, char* argv[]) {
             return 1;
         }
 
-        std::cout << "Debug: Connected to server at " << serverAddress << ":" << 8888 << std::endl;
+        std::cout << "Debug: Connected to server at " << serverAddress << ":" << PORT << std::endl;
 
         if (role == "Parent" || role == "Child") {
-            communicator.runAsPeer("127.0.0.1", connectionToSignalingServerSocket, role);
+            communicator.runAsPeer(connectionToSignalingServerSocket, role);
         }
         else {
             std::cerr << "Invalid role: " << role << std::endl;

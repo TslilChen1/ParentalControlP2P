@@ -7,7 +7,6 @@ const AuthenticationRequest Desirialize::deserializeAuthentication(nlohmann::jso
     r.username = json_obj["username"];
     r.password = json_obj["password"];
     r.role = json_obj["role"];
-    r.ip = json_obj["ip"];
     return r;
 }
 

@@ -63,3 +63,8 @@ std::vector<char> Communicator::receiveMessage() {
     //buffer.resize(bytesReceived);
     return buffer;
 }
+
+SOCKET Communicator::getsocket()
+{
+    return this->clientSocket;
+}

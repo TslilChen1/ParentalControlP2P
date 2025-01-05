@@ -1,5 +1,5 @@
 #include "SHA256.h"
-#include <vector>
+
 
 const void SHA256::processBlock(uint32_t* state, const uint8_t* block)
 {

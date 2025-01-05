@@ -16,7 +16,6 @@ SQLiteWrapper::SQLiteWrapper() {
             username TEXT NOT NULL,
             password TEXT NOT NULL,
             role TEXT NOT NULL,
-            ip TEXT NOT NULL,
             room_id INTEGER NOT NULL
         );
     )";
@@ -96,10 +95,11 @@ int SQLiteWrapper::userExists(AuthenticationRequest& details)
 
 bool SQLiteWrapper::addUser(AuthenticationRequest& details)
 {
-    std::string insertUserQuery = "INSERT INTO Peers (username, password, role, ip, room_id) VALUES ('" + details.username + "', '" + details.password + "', '" + details.role + "', '" + details.ip + "', 0)"; 
+    std::string insertUserQuery = "INSERT INTO Peers (username, password, role, room_id) VALUES ('" + details.username + "', '" + details.password + "', '" + details.role + "', 0)"; 
     return executeQuery(insertUserQuery);  // Assuming executeQuery returns true if successful
 }
 
+/*
 std::string SQLiteWrapper::getMatchingPeer(const std::string& username,const std::string & password, const std::string& role) {
 
     // right now cause im running exerythong on local 127.0.01 the ip will be = but in original needs to be != cause differnt ip's
@@ -117,7 +117,7 @@ std::string SQLiteWrapper::getMatchingPeer(const std::string& username,const std
 
     sqlite3_finalize(stmt);
     return matchedIP;
-}
+}*/
 
 void SQLiteWrapper::saveSDPOffer(const std::string& username, const std::vector<char>& sdpOffer)
 {

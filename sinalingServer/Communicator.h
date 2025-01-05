@@ -16,6 +16,7 @@ public:
     ~Communicator();
     void sendMessage(const std::vector<char> message);
     std::vector<char> receiveMessage();
+    SOCKET getsocket();
 
 private:
     SOCKET clientSocket;

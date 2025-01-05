@@ -15,5 +15,4 @@ struct AuthenticationRequest
 	std::string username;
 	std::string password;
 	std::string role;
-	std::string ip;
 };

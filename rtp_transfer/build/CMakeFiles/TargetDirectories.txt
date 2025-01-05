@@ -1,0 +1,3 @@
+C:/Users/Magshimim/Documents/Magshimim/or-akiva-504-parentalcontrolp2p/VP8-forImage/build/CMakeFiles/VP8-forImage.dir
+C:/Users/Magshimim/Documents/Magshimim/or-akiva-504-parentalcontrolp2p/VP8-forImage/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Magshimim/Documents/Magshimim/or-akiva-504-parentalcontrolp2p/VP8-forImage/build/CMakeFiles/ZERO_CHECK.dir

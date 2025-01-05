@@ -2,14 +2,14 @@
 
 typedef unsigned int uint32_t;
 
-#include <cstdint>  // נדרש עבור uint32_t וסוגי נתונים אחרים קבועי רוחב
-
+#include <cstdint>  
+#include <vector>
 #include <iostream>
 #include <iomanip>
 #include <sstream>
 #include <cstring>
 
-// קבועים עבור SHA-256
+
 const uint32_t k[64] = {
     0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5,
     0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,
